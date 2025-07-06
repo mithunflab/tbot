@@ -85,5 +85,6 @@ async def handler(event):
             print("❌ All models failed. No reply sent.")
 
 print("🤖 Auto-reply with tone, memory, and fail-safe model fallback is running...")
-client.start()
+client.connect()  # ✅ This uses the existing session file silently
+
 client.run_until_disconnected()
